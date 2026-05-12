@@ -9,14 +9,14 @@ const Header = ({ searchQuery, setSearchQuery }) => {
   const location = useLocation();
   return (
     <header className="w-full bg-[#f6f7f8] border-b border-gray-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-2">
+      <div className="max-w-7xl mx-auto flex items-center gap-4 justify-between px-4 md:px-8 py-2">
         {/* Logo */}
         <Link to="/">
           <div>
             <img
               src="../img/meetuplogo.png"
               alt="Meetup Logo"
-              className="h-20 object-contain cursor-pointer"
+              className="h-12 md:h-20 object-contain cursor-pointer"
             />
           </div>
         </Link>
