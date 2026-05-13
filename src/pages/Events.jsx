@@ -35,15 +35,23 @@ const Events = ({ searchQuery, setSearchQuery }) => {
 
   console.log(filteredEvents);
 
-  if (!filteredEvents) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-2xl font-semibold text-red-500">
-          Not able to load events.
-        </h1>
-      </div>
-    );
-  }
+if (!filteredEvents) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+      {/* Loading Spinner */}
+      <div className="w-14 h-14 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
+
+      {/* Loading Text */}
+      <h1 className="text-2xl font-semibold text-gray-700">
+        Loading events...
+      </h1>
+
+      <p className="text-sm text-gray-500">
+        Please wait while we fetch the latest meetups.
+      </p>
+    </div>
+  );
+}
 
   if (loading) {
     return <p>Loading events...</p>;
